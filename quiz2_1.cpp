@@ -2,28 +2,33 @@
 #include <math.h>
 int main()
 {
-    long long int n,j,k,c=0,sum=0;
+    long long int n,j,k=0,c=0,sum=0;
     scanf("%lld", &n);
-    long long int x[100]={0},i;
+    long long int x[100]={0},i,y[100]={0};
     //??? Not cube number
-    for(i=0; i<n; i++){
+    for(i=0; i<=n; i++){
     	sum=sum+8;
+    	y[i]=i+1;
         x[i]=sum;
     }
     for(i=0; i<n; i++){
-        for(j=0; j<n; j++){
-        	if(x[j]==n){
-        		c=1;
-        		break;
-			}
+        if(x[i]==n){
+        	c=1;
+        	break;
 		}
     }
+    for(i=0; i<n; i++){
+    	for(j=0; j<n; j++){
+    		if(y[i]==x[j]){
+    			k++;
+			}
+		}
+    	
+	}
     if(c==1){
     	printf("Not Cube Free");
-	}else if(n<9){
-		printf("%lld",n);
 	}else{
-		printf("%lld",n-1);
+		printf("%lld",n-k);
 	}
     
 

@@ -1,11 +1,11 @@
 #include <stdio.h>
-
+#include <math.h>
 int main()
 {
     long long int n,j,k=0,c=0,sum=0;
     scanf("%lld", &n);
-    long long int x[100]={0},i,y[100]={0};
-    for(i=0; i<=n; i++){
+    long long int x[n],i,y[n];
+    for(i=0; i<n; i++){
     	sum=sum+8;
     	y[i]=i+1;
         x[i]=sum;
